@@ -1,0 +1,377 @@
+<!--doctype html-->
+<html>
+<head>
+
+<title>QA | FAMILY</title>
+
+<style>
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFFFF;
+  	font-family: 'ATC Duel';
+  	text-align: center;	
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	padding:30px 50px;
+	position:relative;
+	width:100%;
+	height: 100vh;
+	box-sizing: border-box;
+	background-size: 1330px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: #fff;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: calibri;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color:#Ffffff; 
+	z-index: 1;
+}
+.menu{
+	display: flex;
+}
+.menu li a{
+	padding: 10px 15px;
+	color:#6c707c;
+	font-size: 13px;
+}
+.logo{
+	font-size: 50px;
+	font-weight: bold;
+	color:#ffaab0;
+	font-family:Tahoma;
+}
+.toggle{
+	display: none;
+}
+.active a,
+.menu li a:hover{
+	background-color:#ffaab0;
+	color:#FFF!important;
+	font-weight: bold;
+	transition: all ease 0.5s;
+}
+.clock {
+    width: 200px;
+    height: 200px;
+    background: -webkit-radial-gradient(#fff, #000);
+    background: radial-gradient(#2E3F50, #0E1B29);
+    box-shadow: inset 0px 0px 30px #ffaab0, 0px 2px 18px rgba(0,0,0,0.5);
+    border: 6px solid #ffaab0;
+    border-radius: 106px;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 100; left: 0; right: 100;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 55px;
+    background: #fff;
+    box-shadow: 0px 0px 7px #000;
+    position: absolute;
+    top: 45px;
+    left: 98px;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0px 0px 4px #000;
+    position: absolute;
+    top: 20px;
+    left: 98px;
+}
+
+.second-hand {
+    width: 2px;
+    height: 80px;
+    background: #bbb;
+    box-shadow: 0px 0px 7px #000;
+    position: absolute;
+    top: 20px;
+    left: 99px;
+}
+
+.pin {
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 10px;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.heading p{
+	font-family: poppins;
+	font-weight:bold;
+	color:#ffaab0;
+	font-size:50px;
+	text-align: center;
+	line-height:90px;
+}
+.heading p{
+	margin:50px 0px 25px;
+	line-height:50px;
+}
+.heading{
+	position: absolute;
+	left:30%;
+	top:89%;
+	transform:translate(-10%,-80%);
+}
+table{
+	width: 950px;
+	box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);
+}
+table, td, th{
+	padding: 20px;
+	border: 1px solid lightgray;
+	border-collapse: collapse;
+	text-align: center;
+}
+td{
+	font-size: 18px;
+
+}
+th{
+	background-color: #ffaab0;
+	color: white;
+	text-align: center;
+	font-family: arial black;
+	font-weight:bold;
+	font-size:30px;
+}
+footer p{
+	font-family: calibri;
+}
+footer p:nth-child(1){
+	font-size: 30px;
+	font-weight:bold;
+	color:#191919;
+	line-height:10px;
+}
+footer p:nth-child(2){
+	font-size: 16px;
+	color:#7e7d7d;
+	width:600px;
+	text-align: center;
+}
+footer{
+	height:300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left:25%;
+	top:450%;
+}
+.s-res{
+	color:#565555;
+	font-size: 12px;
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	transform: translateX(-50%);
+}
+</style>
+
+ <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+ <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+
+</script>
+
+</head>
+<body>
+<section id="main">
+<nav>
+	<a href="index.html" class="logo">QA</a>
+	<div class="toggle"></div>
+	<ul class="menu">
+	<li><a href="index.html" >Home</a></li>	
+	<li><a href="about.html">ABOUT</a></li>	
+	<li><a href="experience.html">EXPERIENCES</a></li>	
+	<li><a href="education.html">EDUCATION</a></li>		
+	<li class="active"><a href="family.html">FAMILY</a></li>
+	<li><a href="gallery.html">GALLERY</a></li>	
+</ul>
+</nav>
+</section>
+
+<body translate="no" >
+  <div class="clock">
+    <div class="minute-hand"></div>
+    <div class="hour-hand"></div>
+    <div class="second-hand"></div>
+    <div class="pin"></div>
+</div>
+
+<div class="time"></div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script id="rendered-js" >
+$(function () {
+  setInterval(function () {
+    var dt = new Date();
+    //$('.time').text(dt);
+
+    var sec_deg = dt.getSeconds() * (360 / 60);
+    var min_deg = dt.getMinutes() * (360 / 60);
+    var hr_deg = dt.getHours() * (360 / 12) + dt.getMinutes() * (360 / 60 / 12); //Edit thanks to Chris Neale: https://codepen.io/onion2k/
+
+    $('.clock .second-hand').css({ '-webkit-transform': 'rotate(' + sec_deg + 'deg)', '-moz-transform': 'rotate(' + sec_deg + 'deg)', '-o-transform': 'rotate(' + sec_deg + 'deg)', '-ms-transform': 'rotate(' + sec_deg + 'deg)', 'transform': 'rotate(' + sec_deg + 'deg)' });
+
+    $('.clock .minute-hand').css({ '-webkit-transform': 'rotate(' + min_deg + 'deg)', '-moz-transform': 'rotate(' + min_deg + 'deg)', '-o-transform': 'rotate(' + min_deg + 'deg)', '-ms-transform': 'rotate(' + min_deg + 'deg)', 'transform': 'rotate(' + min_deg + 'deg)' });
+
+    $('.clock .hour-hand').css({ '-webkit-transform': 'rotate(' + hr_deg + 'deg)', '-moz-transform': 'rotate(' + hr_deg + 'deg)', '-o-transform': 'rotate(' + hr_deg + 'deg)', '-ms-transform': 'rotate(' + hr_deg + 'deg)', 'transform': 'rotate(' + hr_deg + 'deg)' });
+
+  }, 1000);
+});
+//# sourceURL=pen.js
+    </script>
+
+
+<div class="heading">
+	<p><i>“You need to make time for your family<br/>no matter what happens in your life.”<i><br/> – Matthew Quick.</p>
+</div>
+
+<br/>
+
+<div class="table">
+<table border="1" align="center">
+<tr>
+	<th colspan="2">GET TO KNOW MY FAMILY</th>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/abah.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>ARIFFIN BIN ABU HASAN</li>
+	<li>RELATIONSHIP - FATHER</li>
+	<li>DATE OF BIRTH - 14<sup>th</sup> APRIL 1968</li>
+	<li>WORK- SAFETY ASSITANT</li>
+	</ol></td>
+</tr>
+<tr>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/umi.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>FARIDAH BINTI SAMAN</li>
+	<li>RELATIONSHIP - MOTHER</li>
+	<li>DATE OF BIRTH - 21<sup>th</sup> OCTOBER 1969</li>
+	<li>WORK- HUMAN RESOURCE MANAGER</li>
+	</ol></td>
+</tr>
+<tr>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/kimi.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>MUHAMMAD ARIF HAKIMI BIN ARIFFIN</li>
+	<li>RELATIONSHIP - BROTHER</li>
+	<li>DATE OF BIRTH - 23<sup>th</sup> FEBRUARY 1998</li>
+	<li>WORK- GAMER</li>
+	</ol></td>
+</tr>
+<tr>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/yon.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>MUHAMMAD AMIRUL NAZRIN BIN ARIFFIN</li>
+	<li>RELATIONSHIP - LITTLE BROTHER</li>
+	<li>DATE OF BIRTH - 30<sup>th</sup> AUGUST 2001</li>
+	<li>STUDENT- KOLEJ KOMUNITI KEPALA BATAS</li>
+	</ol></td>
+</tr>
+<tr>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/delisha.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>SITI NUR DELISHA BINTI ARIFFIN</li>
+	<li>RELATIONSHIP - LITTLE SISTER</li>
+	<li>DATE OF BIRTH - 10<sup>th</sup> MAC 2007</li>
+	<li>STUDENT- MRSM BALIK PULAU</li>
+	</ol></td>
+</tr>
+<tr>
+</tr>
+<tr>
+	<td rowspan="2"><img src="image/alisha.jpg" width="300px"></td>
+	<td width="500px" rowspan="2"><ol>
+	<li>SITI NUR ALISHA BINTI ARIFFIN</li>
+	<li>RELATIONSHIP - LITTLE SISTER</li>
+	<li>DATE OF BIRTH - 3 APRIL<sup>th</sup> 2009</li>
+	<li>STUDENT- SK BAYAN LEPAS 2</li>
+	</ol></td>
+</tr>
+<tr>
+</table>
+</div>
+<footer>
+<p>QA - Personal Website</p>
+	<p>Have fun in getting to know me!</p>
+	<div class="social-icons">
+	<a href="https://www.facebook.com/sitinurqhursiah.ariffin/" target="_blank"><img src="image/fblogo.png"></img></i></a>
+	<a href="https://twitter.com/tehaisforlife" target="_blank"><img src="image/twitterlogo.png"></img></i></a>
+	<a href="https://www.instagram.com/cahriffin/" target="_blank"><img src="image/instalogo.png"></img></i></a>
+	</div>
+	<p class="s-res">This website are designed for IMD311 Individual Assignment.</p>
+</footer>
+
+</body>
+</html>

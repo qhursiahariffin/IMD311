@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>QA | GALLERY</title>
+ 
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	background: #ffff;
+
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+#main{
+	padding:30px 50px;
+	position:relative;
+	width:100%;
+height: 15vh;
+	box-sizing: border-box;
+	background-size: 1330px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: calibri;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:100%;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	background-color:#Ffffff; 
+	z-index: 1;
+}
+ 
+.menu{
+	display: flex;
+}
+.menu li a{
+	padding: 10px 15px;
+	color:#6c707c;
+	font-size: 13px;
+	
+}
+.logo{
+	font-size: 50px;
+	font-weight: bold;
+	color:#ffaab0;
+	font-family:Tahoma;
+}
+.toggle{
+	display: none;
+}
+.active a,
+.menu li a:hover{
+	background-color:#ffaab0;
+	color:#FFF!important;
+	font-weight: bold;
+	transition: all ease 0.5s;
+}
+#container {
+    left: 50%;
+    width: 609px;
+    height: 405px;
+    display: block;
+    position: absolute;
+    margin-left: -500px;
+}
+
+#container * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+#contaainer input { display: none; }
+
+#img-inner {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 405px;
+    display: block;
+    position: absolute;
+    
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    
+    transition: all .7s ease-in-out;
+    -moz-transition: all .7s ease-in-out;
+    -webkit-transition: all .7s ease-in-out;
+}
+
+#img-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#img-inner:nth-of-type(1) {
+    /* And... CSS3 image preloading :D */
+    background-image:
+        url("image/gal1.jpg"),
+        url("image/gal2.jpg"),
+        url("image/gal3.jpg"),
+        url("image/gal4.jpg"),
+        url("image/gal5.jpg");
+}
+
+#img-inner:hover ~ label.sb-bignav { opacity: 0.5; }
+
+label.sb-bignav:hover { opacity: 1; }
+
+
+.sb-bignav {
+    width: 60px;
+    height: 80%;
+    display: none;
+    position: absolute;
+    
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    
+    transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -webkit-transition: opacity .2s;
+	
+    color: white;
+    font-size: 60pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+label[title="Next"] { right: 0; }
+
+input:checked + li > #img-inner {
+    opacity: 1;
+        
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+input:checked + li > label { display: block; 
+}
+.heading p:nth-child(1){
+	font-family: calibri;
+	font-weight:bold;
+	color:#000000;
+	font-size:50px;
+	position: absolute;
+	left:70%;
+	top:30%;
+	text-transform: uppercase;
+}
+.video{
+	position: absolute;
+	left:54%;
+	top:100%;
+}
+.video p{
+	font-family: calibri;
+	font-weight:bold;
+}
+.media{
+	position: absolute;
+	left:6%;
+	top:100%;
+}
+.media p{
+	font-family: calibri;
+	font-weight:bold;
+	top: 16%;
+}
+footer p{
+	font-family: calibri;
+}
+footer p:nth-child(1){
+	font-size: 30px;
+	font-weight:bold;
+	color:#191919;
+	line-height:10px;
+}
+footer p:nth-child(2){
+	font-size: 16px;
+	color:#7e7d7d;
+	width:600px;
+	text-align: center;
+}
+footer{
+	height:300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left:25%;
+	top:160%;
+}
+.s-res{
+	color:#565555;
+	font-size: 12px;
+	position: absolute;
+	left:50%;
+	bottom:10px;
+	transform: translateX(-50%);
+}
+</style>
+
+  </head>
+  <body>
+<section id="main">
+	<nav>
+	<a href="index.html" class="logo">QA</a>
+	<div class="toggle"></div>
+	<ul class="menu">
+	<li><a href="index.html" >Home</a></li>	
+	<li><a href="about.html">ABOUT</a></li>	
+	<li><a href="experience.html">EXPERIENCES</a></li>	
+	<li><a href="education.html">EDUCATION</a></li>		
+	<li><a href="family.html">FAMILY</a></li>
+	<li class="active"><a href="gallery.html">GALLERY</a></li>	
+</ul>
+</nav>
+</section>
+
+<ul id="container">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal1.jpg">
+        </div>
+        <label for="img-6" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-2" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+    
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal9.jpg">
+        </div>
+        <label for="img-1" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-3" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+    
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal3.jpg">
+        </div>
+        <label for="img-2" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-4" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+    
+    <input type="radio" name="radio-btn" id="img-4" />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal4.jpg">
+        </div>
+        <label for="img-3" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-5" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+    
+    <input type="radio" name="radio-btn" id="img-5" />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal5.jpg">
+        </div>
+        <label for="img-4" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-6" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+    
+    <input type="radio" name="radio-btn" id="img-6" />
+    <li id="img-container">
+        <div id="img-inner">
+            <img src="image/gal6.jpg">
+        </div>
+        <label for="img-5" class="sb-bignav" title="Previous">&#x2039;</label>
+        <label for="img-1" class="sb-bignav" title="Next">&#x203a;</label>
+    </li>
+</ul>
+
+<div class="heading">
+<p>Few of my <font color="ffaab0">memories</font> <3</p>
+</div>
+
+<div class="video">
+	<embed src="media/ipoh.mp4" autoplay="false" width="550" height="300"></embed>
+	<p>Footage from IPOH trip (<font color="ffaab0">edit by me</font>).</p>
+</div>
+
+<div class="media">
+	<embed src="media/fam.mp4" autoplay="false" width="550" height="300"></embed>
+	<p>Footage from family trip (<font color="ffaab0">edit by me</font>).</p>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<footer>
+<p>QA - Personal Website</p>
+	<p>Have fun in getting to know me!</p>
+	<div class="social-icons">
+	<a href="https://www.facebook.com/sitinurqhursiah.ariffin/" target="_blank"><img src="image/fblogo.png"></img></i></a>
+	<a href="https://twitter.com/tehaisforlife" target="_blank"><img src="image/twitterlogo.png"></img></i></a>
+	<a href="https://www.instagram.com/cahriffin/" target="_blank"><img src="image/instalogo.png"></img></i></a>
+	</div>
+	<p class="s-res">This website are designed for IMD311 Individual Assignment.</p>
+</footer>
+
+
+  </body>
+</html>         
